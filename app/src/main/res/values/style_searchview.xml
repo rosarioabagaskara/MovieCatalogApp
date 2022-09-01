@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        //text color
+        <item name="android:editTextColor">#9DAEB1</item>
+        //icon color
+        <item name="android:tint">#9DAEB1</item>
+        //cursor color
+        <item name="colorAccent">#9DAEB1</item>
+        //query search icon color
+        <item name="colorControlNormal">#9DAEB1</item>
+        //query hint color
+        <item name="android:textColorHint">#9DAEB1</item>
+    </style>
+
+</resources>

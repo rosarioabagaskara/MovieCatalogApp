@@ -8,7 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Movies"
+            android:layout_margin="20dp"
+            android:layout_gravity="right"
+            android:theme = "@style/SearchViewStyle"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,12 +37,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
-
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:queryHint="Search Movies"
-            android:layout_margin="20dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/verticalRecyclerView"
