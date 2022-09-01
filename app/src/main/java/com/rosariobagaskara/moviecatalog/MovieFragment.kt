@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,5 +57,36 @@ class MovieFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val recyclerView: RecyclerView = view.findViewById(R.id.verticalRecyclerView)
+        val movieList = getMovieList()
+
+        if(movieList.size > 0){
+            val layoutManager = LinearLayoutManager(context)
+            recyclerView.layoutManager = layoutManager
+            recyclerView.setHasFixedSize(true)
+            val movieAdapter = MovieDataAdapter(movieList)
+            recyclerView.adapter = movieAdapter
+        }
+
+    }
+
+    private fun getMovieList() : ArrayList<MovieData>{
+        val movieList : ArrayList<MovieData> = ArrayList()
+        val image : Int = R.drawable.poster1
+        val title : String = "Spiderman No Way Home"
+        val date : String = "2021-12-22"
+        val rating : Double = 8.18
+        val description : String = "When Peter Parker tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of ..."
+
+        for(i in 1 until 10){
+            movieList.add(MovieData(i, title, date, image, rating, description))
+        }
+
+        return movieList
     }
 }

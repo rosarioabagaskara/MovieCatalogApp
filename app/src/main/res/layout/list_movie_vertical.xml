@@ -21,6 +21,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/movieImageView"
                 android:layout_width="120dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
@@ -33,6 +34,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieTitleTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -48,6 +50,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/dateTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -57,6 +60,7 @@
                         android:textSize="10dp"
                         />
                     <TextView
+                        android:id="@+id/ratingTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -68,15 +72,13 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/descriptionTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:layout_marginLeft="10dp"
                     android:textColor="#9DAEB1"
                     android:text="When Peter Parker tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of ..."/>
-
-
-
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
